@@ -42,10 +42,10 @@ content {
 .detail {
 	display: none;
 }
-span:hover + .detail {
+.product div span:hover + .detail {
 	display: block;
 }
-span:hover {
+.product div span:hover {
 	cursor: pointer;
 }
 .top_menu {
@@ -57,5 +57,5 @@ span:hover {
 	flex-grow: 1;
 }
 .adres {
-	padding-top: 10px;
+	margin-top: 10px;
 }
