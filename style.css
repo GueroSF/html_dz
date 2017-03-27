@@ -2,24 +2,19 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh;
-	align-items: center;
+	align-items: stretch;
 	margin: 0;
 }
 header, footer {
-	width: 100%;
+	flex: 0 0 100%;
 	background: silver;
 	text-align: center;
 }
-header {
-	position: fixed;
-	height: 67px;
-	top: 0;
-}
-footer {
-	height: 35px;
-	bottom: 0;
-}
 content {
+	flex: 1 0 100%;
+	display: flex;
+}
+.catalog {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: row;
@@ -49,12 +44,14 @@ content {
 	cursor: pointer;
 }
 .top_menu {
+	display: none;
 	margin-top: 67px;
 	display: inline-block;
 	border-bottom: 1px dashed silver;
 }
-.contact {
-	flex-grow: 1;
+.contact,
+.first_page_body {
+	padding-left: 30px;
 }
 .adres {
 	margin-top: 10px;
