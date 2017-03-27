@@ -28,7 +28,7 @@ content {
 	border-radius: 5px;
 	flex-basis: 300px;
 }
-.product h4 {
+.product div h4 {
 	text-align: center;
 }
 .product div {
@@ -55,4 +55,10 @@ content {
 }
 .adres {
 	margin-top: 10px;
+}
+a img {
+	display: block;
+	margin: 0 auto;
+	width: 100px;
+	height: 100px;
 }
