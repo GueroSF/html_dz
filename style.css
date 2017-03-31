@@ -31,6 +31,10 @@ content {
 .product div h4 {
 	text-align: center;
 }
+.product div:not(.detail)>p::first-letter {
+	font-size: xx-large;
+	color: green;
+}
 .product div {
 	padding: 5px;
 }
@@ -81,4 +85,8 @@ a img {
 .feedback tr:first-of-type,
 .feedback tr:last-of-type {
 	text-align: center;
+}
+.left_menu ul {
+	list-style: none;
+	padding-left: 20px;
 }
