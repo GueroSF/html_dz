@@ -62,3 +62,11 @@ a img {
 	width: 100px;
 	height: 100px;
 }
+.feedback td+td {
+	width: 240px;
+}
+.feedback [type='email'],
+.feedback [type='text'],
+.feedback textarea{
+	width: 100%
+}
