@@ -78,3 +78,7 @@ a img {
 .feedback textarea {
 	text-transform: capitalize;
 }
+.feedback tr:first-of-type,
+.feedback tr:last-of-type {
+	text-align: center;
+}
