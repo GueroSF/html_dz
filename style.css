@@ -66,6 +66,10 @@ a img {
 	width: 100px;
 	height: 100px;
 }
+a img:hover {
+	transition-duration: 0.5s;
+	transform:scale(4);
+}
 .feedback td+td {
 	width: 240px;
 }
