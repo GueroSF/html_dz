@@ -71,15 +71,16 @@ a img:hover {
 	transform:scale(3);
 }
 .feedback td+td {
+	box-sizing: border-box;
 	width: 240px;
 }
 .feedback [type='email'],
 .feedback [type='text'],
 .feedback textarea{
+	box-sizing: border-box;
 	width: 100%;
 }
 .feedback textarea {
-	width: 99%;
 	resize: vertical;
 }
 .feedback [type='text'],
