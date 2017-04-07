@@ -17,40 +17,45 @@
 			<li><a href="contact.html">Контакты</a></li>
 		</ul>
 	</div>
-	<div class="contact">
+	<div class="conteiner">
 		<div class="feedback">
 		<form action="" method="post">
-			<table>
-				<tr>
-					<td colspan="2"><p>Написать нам: </p></td>
-				</tr>
-				<tr>
-					<td>Имя:</td><td><input type="text" name="name"></td>
-				</tr>
-				<tr>
-					<td>Почта:</td><td><input type="email" name="email"></td>
-				</tr>
-				<tr>
-					<td>Тема:</td><td><input type="text" name="tema"></td>
-				</tr>
-				<tr>
-					<td>Тело сообщения:</td><td><textarea name="body" cols="30" rows="4"></textarea></td>
-				</tr>
-				<tr>
-					<td colspan="2"><input type="submit" name=""></td>
-				</tr>
-			</table>
+			<fieldset>
+				<legend>Написать нам:</legend>
+				<div class="row">
+					<span>Имя:</span>
+					<input type="text" name="name">
+				</div>
+				<div class="row">
+					<span>Почта:</span>
+					<input type="email" name="email">
+				</div>
+				<div class="row">
+					<span>Тема:</span>
+					<input type="text" name="tema">
+				</div>
+				<div class="row">
+					<span>Почта:</span>
+					<textarea name="body" cols="30" rows="4"></textarea>
+				</div>
+				<div class="submit">
+					<input type="submit" name="submit">
+				</div>
+			</fieldset>
 		</form>
 		</div>
-		<div class="adres">
+		<div class="find_us">
 			<span>Телефон: <sub>+</sub><sup>-</sup> 025647862</span><br/>
 			<span>Адрес: Наш адрес не дом и не улица, наш адрес Советский Союз</span><br/>
 			<span>E-mail: емаил@email.com </span>
 		</div>
+		<div class="find_us">
+			<iframe class="map" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d287105.16654765024!2d37.623522693298355!3d55.79307965206048!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1491564415286" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+		</div>
 	</div>
 </content>
 <footer>
-	&copy; <span>все права защишены!</span>
+	<span>&copy; все права защишены!</span>
 </footer>
 </body>
 </html>
