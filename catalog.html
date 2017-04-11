@@ -21,9 +21,9 @@
 		<div class="product">
 			<div>
 				<h4>Товар 1</h4>
-				<a href="img/1.jpg" target="_blank"><img src="img/1.jpg"></a>
+				<a href="img/1.jpg" target="_blank"><img src="img/small1.jpg"></a>
 				<p>Это самый нужный товар!</p>
-				<span>Характеристики:</span>
+				<span class="button">Характеристики</span>
 				<div class="detail">
 					<p>Эта характеристика включает группу, подгруппу, вид, разновидность, наименование, торговую марку товара и устанавливает принципиальные отличия одного вида или наименования товара от другого. Такие отличия обусловлены качественными характеристиками.</p>
 				</div>
@@ -32,9 +32,9 @@
 		<div class="product">
 			<div>
 				<h4>Товар 2</h4>
-				<a href="img/2.jpg" target="_blank"><img src="img/2.jpg"></a>
+				<a href="img/2.jpg" target="_blank"><img src="img/small2.jpg"></a>
 				<p>Это тоже нужный товар!</p>
-				<span>Характеристики:</span>
+				<span class="button">Характеристики:</span>
 				<div class="detail">
 					<p>Эта характеристика включает группу, подгруппу, вид, разновидность, наименование, торговую марку товара и устанавливает принципиальные отличия одного вида или наименования товара от другого. Такие отличия обусловлены качественными характеристиками.</p>
 				</div>
@@ -43,9 +43,9 @@
 		<div class="product">
 		<div>
 			<h4>Товар 3</h4>
-			<a href="img/3.jpg" target="_blank"><img src="img/3.jpg"></a>
+			<a href="img/3.jpg" target="_blank"><img src="img/small3.jpg"></a>
 			<p>А этот товар, на всякий случай</p>
-			<span>Характеристики:</span>
+			<span class="button">Характеристики</span>
 			<div class="detail">
 				<p>Качественные характеристики — это, например, безопасность, экологичность и др. Качественные характеристики имеют решающее значение для формирования потребительских предпочтений. Вместе
 				с тем многие показатели потребительских свойств выражаются через количественные характеристики.</p>
@@ -55,9 +55,9 @@
 		<div class="product">
 			<div>
 				<h4>Товар 4</h4>
-				<a href="img/4.jpg" target="_blank"><img src="img/4.jpg"></a>
+				<a href="img/4.jpg" target="_blank"><img src="img/small4.jpg"></a>
 				<p>Этот товар первой необходимости!</p>
-				<span>Характеристики:</span>
+				<span class="button">Характеристики</span>
 				<div class="detail">
 					<p>Эта характеристика включает группу, подгруппу, вид, разновидность, наименование, торговую марку товара и устанавливает принципиальные отличия одного вида или наименования товара от другого. Такие отличия обусловлены качественными характеристиками.</p>
 				</div>
@@ -66,8 +66,9 @@
 		<div class="product">
 			<div>
 				<h4>Товар 5</h4>
+				<a href="img/5.jpg" target="_blank"><img src="img/small5.jpg"></a>
 				<p>Это, честно говоря, так себе</p>
-				<span>Характеристики:</span>
+				<span class="button">Характеристики</span>
 				<div class="detail">
 					<p>Эта характеристика включает группу, подгруппу, вид, разновидность, наименование, торговую марку товара и устанавливает принципиальные отличия одного вида или наименования товара от другого. Такие отличия обусловлены качественными характеристиками.</p>
 				</div>
@@ -76,8 +77,9 @@
 		<div class="product">
 			<div>
 				<h4>Товар 6</h4>
+				<a href="img/6.jpg" target="_blank"><img src="img/small6.jpg"></a>
 				<p>И этот товар, на всякий случай</p>
-				<span>Характеристики:</span>
+				<span class="button">Характеристики</span>
 				<div class="detail">
 					<p>Стоимостные характеристики товаров не относятся к товароведческим; они составляют предмет изучения экономических дисциплин, поэтому в данном курсе не рассматриваются.</p>
 				</div>
@@ -90,11 +92,27 @@
 </footer>
 </body>
 <script type="text/javascript">
+	const body = document.body;
+	function cloneDiv() {
+		//this.innerHTML = '!!!!!ok!!!!';
+		let parent = (this.parentElement).parentElement;
+		let cloneProduct = parent.cloneNode(true);
+		cloneProduct.classList.add('backdror');
+		cloneProduct.firstElementChild.setAttribute('id','select');
+		cloneProduct.firstElementChild.classList.add('selected');
+		cloneProduct.querySelector('.detail').style.display = 'block';
+		cloneProduct.querySelector('.button').style.boxShadow = 'none';
+		cloneProduct.querySelector('.button').style.cursor = 'default';
+		body.insertBefore(cloneProduct, body.firstChild);
+		let select = document.getElementById('select');
+		select.addEventListener('click',function(){
+			this.parentElement.remove();
+		});
+	}
 	let l=document.querySelectorAll('span:not(.footer)');
 	for (let i = 0; i<l.length;i++){
-		l[i].addEventListener('mouseover',function(){
-		this.innerHTML = '!!!!!ok!!!!';
-		});
+		l[i].addEventListener('click',cloneDiv);
 	};
+	
 </script>
 </html>
