@@ -86,7 +86,15 @@
 	</div>
 </content>
 <footer>
-	<span>&copy; все права защишены!</span>
+	<span class="footer">&copy; все права защишены!</span>
 </footer>
 </body>
+<script type="text/javascript">
+	let l=document.querySelectorAll('span:not(.footer)');
+	for (let i = 0; i<l.length;i++){
+		l[i].addEventListener('mouseover',function(){
+		this.innerHTML = '!!!!!ok!!!!';
+		});
+	};
+</script>
 </html>
