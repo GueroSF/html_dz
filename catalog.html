@@ -95,7 +95,8 @@
 	const body = document.body;
 	function cloneDiv() {
 		//this.innerHTML = '!!!!!ok!!!!';
-		let parent = (this.parentElement).parentElement;
+		let parent = this.closest('.product');
+		//let parent = (this.parentElement).parentElement;
 		let cloneProduct = parent.cloneNode(true);
 		cloneProduct.classList.add('backdror');
 		cloneProduct.firstElementChild.setAttribute('id','select');
