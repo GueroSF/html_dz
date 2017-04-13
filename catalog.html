@@ -94,9 +94,7 @@
 <script type="text/javascript">
 	const body = document.body;
 	function cloneDiv() {
-		//this.innerHTML = '!!!!!ok!!!!';
 		let parent = this.closest('.product');
-		//let parent = (this.parentElement).parentElement;
 		let cloneProduct = parent.cloneNode(true);
 		cloneProduct.classList.add('backdror');
 		cloneProduct.firstElementChild.setAttribute('id','select');
@@ -113,7 +111,6 @@
 	let l=document.querySelectorAll('span:not(.footer)');
 	for (let i = 0; i<l.length;i++){
 		l[i].addEventListener('click',cloneDiv);
-	};
-	
+	};	
 </script>
 </html>
