@@ -144,3 +144,16 @@ a img:hover {
 	border-radius: 5px;
 	box-shadow: 1px 1px;
 }
+
+@media screen and (max-width:660px){
+	content {
+		flex-direction: column;
+	}
+	.left_menu ul {
+		display: flex;
+		justify-content: center;
+	}
+	.conteiner {
+		margin-left: 25px;
+	}
+}
