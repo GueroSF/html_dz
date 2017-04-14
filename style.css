@@ -7,6 +7,7 @@ body {
 	background-color: #f8f8f8;
 }
 header {
+	height: 75px;
 	background: silver;
 	text-align: center;
 }
@@ -143,6 +144,12 @@ a img:hover {
 	background: #e2e8ea;
 	border-radius: 5px;
 	box-shadow: 1px 1px;
+}
+.top_menu {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	background-color: aliceblue;
 }
 
 @media screen and (max-width:660px){
